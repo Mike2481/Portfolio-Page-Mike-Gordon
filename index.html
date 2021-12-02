@@ -3,18 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Portfolio for Mike Gordon</title>
+        <script src="https://kit.fontawesome.com/0f5f4967cf.js" crossorigin="anonymous"></script>
     </head>
 
     <header>
         <nav>
-            <a href="about-me">About Me</a>
-            <a href="work">My Work</a>
-            <a href="reach-out">Reach Out</a>
-            <a href="resume">Resume</a>
+            <a href="#about-me">About Me</a>
+            <a href="#work">My Work</a>
+            <a href="#reach-out">Reach Out</a>
+            <a href="#resume">Resume</a>
         </nav>
         <h1>Mike Gordon</h1>
 
-        <img src="/assets/images/profile.jpg" style="width:50px; height:50px">
+        <img src="assets/images/profile.jpg">
         
     </header>
 
@@ -22,28 +23,37 @@
     <br>
 
     <body>
-        <section class="about-me">
+        <section id="about-me" class="about-me">
+            <h2>About Me</h2>
             <p>this section will be all about me</p>
 
         </section>
-        <section class="work">
-            <div>work-1</div>
-            <div>work-2</div>
-            <div>work-3</div>
-            <div>work-4</div>
-            <div>work-5</div>
+        <section id="work">
+            <div class="work">
+                <img class="project-1" src="https://via.placeholder.com/400.png" alt="first project">
+            </div>
+            <div class="work">
+                <img class="project-2" src="https://via.placeholder.com/200.png" alt="first project">
+            </div>
+            <div class="work">
+                <img class="project-3" src="https://via.placeholder.com/200.png" alt="first project">
+            </div>
+            <div class="work">
+                <img class="project-4" src="https://via.placeholder.com/200.png" alt="first project">
+            </div>
+            <div class="work">
+                <img class="project-5" src="https://via.placeholder.com/200.png" alt="first project">
+            </div>
         </section>
     </body>
 
     <footer>
-        <section class="reach-out">
-            <!--this link will be the better way once you learn javascript
-            <button onclick="https://www.linkedin.com/in/mike-gordon-a34832b0" target="blank">LinkedIn</button> -->
-            <a href="https://www.linkedin.com/in/mike-gordon-a34832b0" target="blank">LinkedIn</a>
-
-            <button type="button">twitter</button>
-            <button type="button">facebook</button>
+        <section id="reach-out" class="reach-out">
             <a href="mailto:vprmatrix55@gmail.com"><button class="button">Email</button></a>
+
+            <a href="https://www.linkedin.com/in/mike-gordon-a34832b0" target="blank" ><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" target="blank"><i class="fab fa-facebook-square"></i></a>
 
         </section>
     </footer>
