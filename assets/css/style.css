@@ -1,4 +1,70 @@
-#work {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: turquoise;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 4em;
+}
+
+.container-2 {
+    display: flex;
+    width: 100%;
+    height: 25em;
+}
+
+.container-2 nav {
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.container-2 nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.first-name {
+    order: 1;
+    flex: 1;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+
+
+}
+
+.last-name {
+    order: 2;
+    flex: 1;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+
+}
+
+.left-links {
+    list-style: none;
+    width: 100%;
+    
+}
+
+.right-links {
+    list-style: none;
+    width: 100%;
+}
+
+header div img {
+    border-radius: 50%;
 }
