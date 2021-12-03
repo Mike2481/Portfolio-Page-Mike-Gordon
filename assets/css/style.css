@@ -207,6 +207,7 @@ body {
 }
 
 .about-me {
+    align-items: center;
     height: 15em;
     border: .125em solid var(--primary-color);
     border-radius: 1em;
@@ -214,11 +215,12 @@ body {
     margin: 0 2em 3em 2em;
     padding: 1em;
     box-shadow: .25em .5em .5em var(--primary-color);
+    background: var(--text-color);
 }
 
 .about-me h2 {
+    width: 100;
     font-size: 2.5em;
-    text-align: left;
     border-bottom: .05em solid black;
     text-align: center;
 }
@@ -231,5 +233,63 @@ body {
 
 body .projects {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: .125em solid var(--primary-color);
+    border-radius: 1em;
+    top: 0;
+    margin: 0 2em 3em 2em;
+    padding: 1em;
+    box-shadow: .25em .5em .5em var(--primary-color);
+    justify-content: space-around;
+    background: var(--text-color);
 
+}
+ 
+.projects h2 {
+    width: 100%;
+    font-size: 2.5em;
+    border-bottom: .05em solid black;
+    text-align: center;
+}
+
+.project-1 {
+    flex: 2;
+    border-radius: 1em;
+    top: 0;
+    margin: 0 2em 3em 2em;
+    padding: 1em;
+    box-shadow: .25em .5em .5em var(--primary-color);
+}
+
+.project-2 {
+    flex: 1;
+    border-radius: 1em;
+    top: 0;
+    margin: 0 2em 3em 2em;
+    padding: 1em;
+    box-shadow: .25em .5em .5em var(--primary-color);
+}
+
+.project-3 {
+    flex: 1;
+    border-radius: 1em;
+    top: 0;
+    margin: 0 2em 3em 2em;
+    padding: 1em;
+    box-shadow: .25em .5em .5em var(--primary-color);
+}.project-4 {
+    flex: 1;
+    border-radius: 1em;
+    top: 0;
+    margin: 0 2em 3em 2em;
+    padding: 1em;
+    box-shadow: .25em .5em .5em var(--primary-color);
+}.project-5 {
+    flex: 1;
+    border-radius: 1em;
+    top: 0;
+    margin: 0 2em 3em 2em;
+    padding: 1em;
+    box-shadow: .25em .5em .5em var(--primary-color);
 }
