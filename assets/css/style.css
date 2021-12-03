@@ -4,20 +4,44 @@
     padding: 0;
 }
 
+:root {
+    --primary-color:  #00458b;
+    --background-color: #3fd2c7;
+    --text-color:  #99ddff;
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: turquoise;
+    background-color: var(--background-color);
 }
 
 .container-1 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     height: 4em;
     padding: 3em;
 }
+
+.first-name {
+    font-size: 4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: var(--text-color);
+
+}
+
+.last-name {
+    font-size: 4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: var(--text-color);
+
+}
+
 
 .container-2 {
     display: flex;
@@ -27,33 +51,16 @@ header {
 
 .container-2 nav {
     display: flex;
-    width: 40%;
+    width: 100%;
     align-items: center;
 }
 
 .container-2 nav ul {
     display: flex;
     justify-content: space-around;
+    padding: 1.2em;
 }
 
-.first-name {
-    order: 1;
-    flex: 1;
-    font-size: 60px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-
-
-}
-
-.last-name {
-    order: 2;
-    flex: 1;
-    font-size: 60px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-
-}
 
 .left-links {
     list-style: none;
@@ -65,21 +72,21 @@ header {
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    color: red;
-    border: red 0.125em solid;
+    color: var(--primary-color);
+    border: var(--primary-color) 0.125em solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
 
-    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em red;
+    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
 
-    box-shadow: inset 0 0 0.5em 0 red, 0 0 0.5em 0 red;
+    box-shadow: inset 0 0 0.5em 0 var(--primary-color), 0 0 0.5em 0 var(--primary-color);
     position: relative;
 }
 
 .left-links a::before {
     content: "";
     position: absolute;
-    background: red;
+    background: var(--primary-color);
     top: 120%;
     left: 0;
     width: 100%;
@@ -98,7 +105,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 2em 0.5em red;
+    box-shadow: 0 0 2em 0.5em var(--primary-color);
     opacity: 0;
     transition: opacity 100ms linear;
 }
@@ -106,7 +113,7 @@ header {
 
 .left-links a:hover,
 .left-links a:focus {
-    background: red;
+    background: var(--primary-color);
     color: black;
     text-shadow: none;
 }
@@ -125,8 +132,70 @@ header {
 .right-links {
     list-style: none;
     width: 100%;
+    
+}
+
+.right-links a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: var(--primary-color) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
+
+    box-shadow: inset 0 0 0.5em 0 var(--primary-color), 0 0 0.5em 0 var(--primary-color);
+    position: relative;
+}
+
+.right-links a::before {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.right-links a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--primary-color);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+
+.right-links a:hover,
+.right-links a:focus {
+    background: var(--primary-color);
+    color: black;
+    text-shadow: none;
+}
+
+.right-links a:hover::before,
+.right-links a:focus::before {
+    opacity: 1;
+}
+
+.right-links a:hover::after,
+.right-links a:focus::after {
+    opacity: 1;
 }
 
 header div img {
     border-radius: 50%;
+    z-index: 9999;
 }
