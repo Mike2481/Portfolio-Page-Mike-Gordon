@@ -184,10 +184,13 @@ body .projects {
     flex: 2;
     border-radius: 1em;
     top: 0;
-    margin: 0 1em 3em 1em;
-    padding: 1em;
     box-shadow: .25em .5em .5em var(--primary-color);
+    max-width: 250px;
+    height: 200px;
+
 }
+
+
 
 .project-2 {
     flex: 1;
@@ -320,8 +323,17 @@ footer .button:hover {
         flex-wrap: wrap;
     }
 
+    header nav ul li {
+        margin: 1.5em .5em 0 .5em;
+    }
+
     section .projects {
         margin: 0 0.25em 3em 0.25em;
+    }
+
+    .project-1 {
+        margin-top: 1em;
+        margin-bottom: .5em;
     }
 
 
