@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root {
@@ -10,204 +12,129 @@
     --text-color:  #99ddff;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: var(--background-color);
-}
-
-.container-1 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 4em;
-    padding: 3em;
-}
-
-.first-name {
-    font-size: 4em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: black;
-    text-shadow: .025em .05em .05em gray;
-
-}
-
-.last-name {
-    font-size: 4em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: black;
-    text-shadow: .025em .05em .05em gray;
-
-}
-
-
-.container-2 {
-    display: flex;
-    width: 100%;
-    height: 25em;
-}
-
-.container-2 nav {
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.container-2 nav ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 1.2em;
-}
-
-
-.left-links {
-    list-style: none;
-    width: 100%;
-    
-}
-
-.left-links a {
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--primary-color);
-    border: var(--primary-color) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-
-    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
-
-    box-shadow: inset 0 0 0.5em 0 var(--primary-color), 0 0 0.5em 0 var(--primary-color);
-    position: relative;
-}
-
-.left-links a::before {
-    content: "";
-    position: absolute;
-    background: var(--primary-color);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
-}
-
-.left-links a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 2em 0.5em var(--primary-color);
-    opacity: 0;
-    transition: opacity 100ms linear;
-}
-
-
-.left-links a:hover,
-.left-links a:focus {
-    background: var(--primary-color);
-    color: black;
-    text-shadow: none;
-}
-
-.left-links a:hover::before,
-.left-links a:focus::before {
-    opacity: 1;
-}
-
-.left-links a:hover::after,
-.left-links a:focus::after {
-    opacity: 1;
-}
-
-
-.right-links {
-    list-style: none;
-    width: 100%;
-    
-}
-
-.right-links a {
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--primary-color);
-    border: var(--primary-color) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-
-    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
-
-    box-shadow: inset 0 0 0.5em 0 var(--primary-color), 0 0 0.5em 0 var(--primary-color);
-    position: relative;
-}
-
-.right-links a::before {
-    content: "";
-    position: absolute;
-    background: var(--primary-color);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
-}
-
-.right-links a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 2em 0.5em var(--primary-color);
-    opacity: 0;
-    transition: opacity 100ms linear;
-}
-
-
-.right-links a:hover,
-.right-links a:focus {
-    background: var(--primary-color);
-    color: black;
-    text-shadow: none;
-}
-
-.right-links a:hover::before,
-.right-links a:focus::before {
-    opacity: 1;
-}
-
-.right-links a:hover::after,
-.right-links a:focus::after {
-    opacity: 1;
-}
-
-header div img {
-    border-radius: 50%;
-    z-index: 9999;
+html, body {
+    min-height: 100%;
 }
 
 body {
-    background: var(--background-color);
+    background-image: url(/assets/images/background.png);
+    background-color: var(--background-color);
+    position: relative;
+}
+
+
+
+header {
+    background-color: var(--background-color);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 10px 5px 0 5px;
+    z-index: 999;
+    width: 90vw;
+    border: 1px solid black;
+    border-radius: 1em;
+
+
+}
+
+header h1 {
+    width: 100%;
+    font-size: 6vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-color);
+
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2em 3em 2em;
+}
+
+header .logo img {
+    border-radius: 50%;
+}
+
+
+header nav {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;  
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: var(--primary-color) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    font-size: 1em;
+    margin: .25em;
+
+    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
+
+    box-shadow: inset 0 0 0.5em 0 var(--primary-color), 0 0 0.5em 0 var(--primary-color);
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--primary-color);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+
+nav a:hover,
+nav a:focus {
+    background: var(--primary-color);
+    color: black;
+    text-shadow: none;
+}
+
+nav a:hover::before,
+nav a:focus::before {
+    opacity: 1;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    opacity: 1;
 }
 
 .about-me {
-    align-items: center;
     height: 15em;
     border: .125em solid var(--primary-color);
     border-radius: 1em;
@@ -219,7 +146,7 @@ body {
 }
 
 .about-me h2 {
-    width: 100;
+    width: 100%;
     font-size: 2.5em;
     border-bottom: .05em solid black;
     text-align: center;
@@ -257,7 +184,7 @@ body .projects {
     flex: 2;
     border-radius: 1em;
     top: 0;
-    margin: 0 2em 3em 2em;
+    margin: 0 1em 3em 1em;
     padding: 1em;
     box-shadow: .25em .5em .5em var(--primary-color);
 }
@@ -292,4 +219,110 @@ body .projects {
     margin: 0 2em 3em 2em;
     padding: 1em;
     box-shadow: .25em .5em .5em var(--primary-color);
+}
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    margin-bottom: 0;
+    background: black;
+}
+
+
+.reach-out {
+    margin: 2px 0;
+    text-align: center;
+    height: 40px;
+    left: 100%;
+
+}
+
+.reach-out h3 {
+    color: white;
+}
+
+.reach-out a {
+    font-size: 1.25em;
+    width: 100%;
+    position: relative;
+    padding: 2px;    
+}
+
+.reach-out .link {
+    transition: font-size ease-out 150ms;
+    font-size: 1.25em;
+    top: 0%;
+}
+
+.reach-out .link:hover {
+    font-size: 2em;
+}
+
+footer .button {
+    width: 6em;
+    height: 1.5em;
+    transition: height, margin ease-out 150ms;
+    color: var(--primary-color);
+    border: 1px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .75em;
+    border-radius: .35em;
+    padding: 2.5px;
+    cursor: pointer;
+    transform: translateY(-2px);
+    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
+}
+
+footer .button:hover {
+    height: 2em;
+    margin: .5em;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+
+@media (min-width: 701px) and (max-width: 768px) {
+    
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    header h1 {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 6rem;
+    }
+    header .logo {
+        flex: 2;
+    }
+
+    
+}
+
+@media (max-width: 575px) {
+    header {
+        margin: 10px 0 0 0;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    header .logo {
+       transform: scale(.7);
+    }
+    header nav ul {
+        flex-wrap: wrap;
+    }
+
+    section .projects {
+        margin: 0 0.25em 3em 0.25em;
+    }
+
+
 }
