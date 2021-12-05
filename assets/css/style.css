@@ -22,10 +22,10 @@ body {
     position: relative;
 }
 
-
+/* Header/Image Styling Start */
 
 header {
-    background-color: var(--background-color);
+    background-color: var(--text-color);
     text-align: center;
     position: relative;
     display: flex;
@@ -46,6 +46,8 @@ header h1 {
     font-size: 6vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--primary-color);
+    text-shadow: 1px 2px white;
+    font-style: italic;
 
 }
 
@@ -59,6 +61,10 @@ header .logo {
 header .logo img {
     border-radius: 50%;
 }
+
+/* Header/Image Styling End */
+
+/* Navigation Styling Start */
 
 
 header nav {
@@ -134,6 +140,10 @@ nav a:focus::after {
     opacity: 1;
 }
 
+/* Navigation Styling End */
+
+/* About Me Styling Start */
+
 .about-me {
     height: 15em;
     border: .125em solid var(--primary-color);
@@ -143,13 +153,18 @@ nav a:focus::after {
     padding: 1em;
     box-shadow: .25em .5em .5em var(--primary-color);
     background: var(--text-color);
+    color: var(--primary-color);
 }
+
 
 .about-me h2 {
     width: 100%;
     font-size: 2.5em;
     border-bottom: .05em solid black;
     text-align: center;
+    text-shadow: 1px 2px white;
+    font-style: italic;
+
 }
 
 .about-me p {
@@ -157,6 +172,10 @@ nav a:focus::after {
     text-align: center;
     
 }
+
+/* About Me Styling End */
+
+/* My Work Style Section */
 
 body .projects {
     display: flex;
@@ -170,6 +189,7 @@ body .projects {
     box-shadow: .25em .5em .5em var(--primary-color);
     justify-content: space-around;
     background: var(--text-color);
+    color: var(--primary-color);
 
 }
  
@@ -178,51 +198,409 @@ body .projects {
     font-size: 2.5em;
     border-bottom: .05em solid black;
     text-align: center;
+    text-shadow: 1px 1.5px white;
+    font-style: italic;
+
 }
 
-.project-1 {
-    flex: 2;
-    border-radius: 1em;
-    top: 0;
+/*  First Project Styling Start */
+
+.first-container {
+    padding: 2rem;
+    background-image: url(/assets/images/project-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    margin: 1rem 2em 3em 2em;
+    color: var(--primary-color);
     box-shadow: .25em .5em .5em var(--primary-color);
-    max-width: 250px;
+    width: 250px;
     height: 200px;
+    text-align: left;
+
+    
+}
+
+.first-container h3 {
+    position: relative;
+    top: 85%;
+    z-index: 1;
+    display: inline-block;
+}
+
+.first-container h3::after {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -2rem;
+    bottom: -0.25rem;
+    width: calc(100% + 4rem);
+    background: var(--text-color);
+    z-index: -1;
+
+    transform: scaleX(0.06);
+    transform-origin: left;
+    transition: transform 250ms ease-in;
 
 }
 
-
-
-.project-2 {
-    flex: 1;
-    border-radius: 1em;
-    top: 0;
-    margin: 0 2em 3em 2em;
-    padding: 1em;
-    box-shadow: .25em .5em .5em var(--primary-color);
+.first-container:hover h3::after {
+    transform: scaleX(1);
 }
 
-.project-3 {
-    flex: 1;
-    border-radius: 1em;
-    top: 0;
-    margin: 0 2em 3em 2em;
-    padding: 1em;
-    box-shadow: .25em .5em .5em var(--primary-color);
-}.project-4 {
-    flex: 1;
-    border-radius: 1em;
-    top: 0;
-    margin: 0 2em 3em 2em;
-    padding: 1em;
-    box-shadow: .25em .5em .5em var(--primary-color);
-}.project-5 {
-    flex: 1;
-    border-radius: 1em;
-    top: 0;
-    margin: 0 2em 3em 2em;
-    padding: 1em;
-    box-shadow: .25em .5em .5em var(--primary-color);
+.first-container .pop-up {
+    position: relative;
+    top: 80%;
+    z-index: 1;
+    display: inline-block;
+    z-index: 1;
+    left: -.58rem;
+    color: transparent;
+    transition: color 150ms 300ms;
 }
+
+.first-container .pop-up::after {
+    content: '';
+    position: absolute;
+    top: -.2rem;
+    bottom: -.2rem;
+    left: -.2rem;
+    right: -.2rem;
+    background: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 150ms ease-in 250ms;
+    transform-origin: bottom;
+}
+
+.first-container:hover .pop-up {
+    color: var(--primary-color);
+}
+
+.first-container:hover .pop-up::after {
+    transform: scaleY(1);
+}
+
+/* First Project Styling End */
+
+/* Second Project Styling Start */
+
+.second-container {
+    padding: 2rem;
+    background-image: url(https://via.placeholder.com/200/0000ff.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    margin: 1rem 2em 3em 2em;
+    color: var(--primary-color);
+    box-shadow: .25em .5em .5em var(--primary-color);
+    width: 200px;
+    height: 150px;
+    text-align: left;
+
+    
+}
+
+.second-container h3 {
+    position: relative;
+    top: 75%;
+    z-index: 1;
+    display: inline-block;
+}
+
+.second-container h3::after {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -2rem;
+    bottom: -0.25rem;
+    width: calc(100% + 4rem);
+    background: var(--text-color);
+    z-index: -1;
+
+    transform: scaleX(0.06);
+    transform-origin: left;
+    transition: transform 250ms ease-in;
+
+}
+
+.second-container:hover h3::after {
+    transform: scaleX(1);
+}
+
+.second-container .pop-up {
+    position: relative;
+    top: 66%;
+    z-index: 1;
+    display: inline-block;
+    z-index: 1;
+    left: .73rem;
+    color: transparent;
+    transition: color 150ms 300ms;
+}
+
+.second-container .pop-up::after {
+    content: '';
+    position: absolute;
+    top: -.2rem;
+    bottom: -.2rem;
+    left: -.2rem;
+    right: -.2rem;
+    background: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 150ms ease-in 250ms;
+    transform-origin: bottom;
+}
+
+.second-container:hover .pop-up {
+    color: var(--primary-color);
+}
+
+.second-container:hover .pop-up::after {
+    transform: scaleY(1);
+}
+
+/* Second Project Styling End */
+
+/* Third Project Styling Start */
+.third-container {
+    padding: 2rem;
+    background-image: url(https://via.placeholder.com/200/0000ff.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    margin: 1rem 2em 3em 2em;
+    color: var(--primary-color);
+    box-shadow: .25em .5em .5em var(--primary-color);
+    width: 200px;
+    height: 150px;
+    text-align: left;
+
+    
+}
+
+.third-container h3 {
+    position: relative;
+    top: 75%;
+    z-index: 1;
+    display: inline-block;
+}
+
+.third-container h3::after {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -2rem;
+    bottom: -0.25rem;
+    width: calc(100% + 4rem);
+    background: var(--text-color);
+    z-index: -1;
+
+    transform: scaleX(0.06);
+    transform-origin: left;
+    transition: transform 250ms ease-in;
+
+}
+
+.third-container:hover h3::after {
+    transform: scaleX(1);
+}
+
+.third-container .pop-up {
+    position: relative;
+    top: 66%;
+    z-index: 1;
+    display: inline-block;
+    z-index: 1;
+    left: .73rem;
+    color: transparent;
+    transition: color 150ms 300ms;
+}
+
+.third-container .pop-up::after {
+    content: '';
+    position: absolute;
+    top: -.2rem;
+    bottom: -.2rem;
+    left: -.2rem;
+    right: -.2rem;
+    background: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 150ms ease-in 250ms;
+    transform-origin: bottom;
+}
+
+.third-container:hover .pop-up {
+    color: var(--primary-color);
+}
+
+.third-container:hover .pop-up::after {
+    transform: scaleY(1);
+}
+
+/* Third Project Styling End */
+
+/* Fourth Project Styling Start */
+.fourth-container {
+    padding: 2rem;
+    background-image: url(https://via.placeholder.com/200/0000ff.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    margin: 1rem 2em 3em 2em;
+    color: var(--primary-color);
+    box-shadow: .25em .5em .5em var(--primary-color);
+    width: 200px;
+    height: 150px;
+    text-align: left;
+
+    
+}
+
+.fourth-container h3 {
+    position: relative;
+    top: 75%;
+    z-index: 1;
+    display: inline-block;
+}
+
+.fourth-container h3::after {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -2rem;
+    bottom: -0.25rem;
+    width: calc(100% + 4rem);
+    background: var(--text-color);
+    z-index: -1;
+
+    transform: scaleX(0.06);
+    transform-origin: left;
+    transition: transform 250ms ease-in;
+
+}
+
+.fourth-container:hover h3::after {
+    transform: scaleX(1);
+}
+
+.fourth-container .pop-up {
+    position: relative;
+    top: 66%;
+    z-index: 1;
+    display: inline-block;
+    z-index: 1;
+    left: .73rem;
+    color: transparent;
+    transition: color 150ms 300ms;
+}
+
+.fourth-container .pop-up::after {
+    content: '';
+    position: absolute;
+    top: -.2rem;
+    bottom: -.2rem;
+    left: -.2rem;
+    right: -.2rem;
+    background: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 150ms ease-in 250ms;
+    transform-origin: bottom;
+}
+
+.fourth-container:hover .pop-up {
+    color: var(--primary-color);
+}
+
+.fourth-container:hover .pop-up::after {
+    transform: scaleY(1);
+}
+
+/* Fourth Project Styling End */
+
+/* Fifth Project Styling Start */
+.fifth-container {
+    padding: 2rem;
+    background-image: url(https://via.placeholder.com/200/0000ff.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    margin: 1rem 2em 3em 2em;
+    color: var(--primary-color);
+    box-shadow: .25em .5em .5em var(--primary-color);
+    width: 200px;
+    height: 150px;
+    text-align: left;
+
+    
+}
+
+.fifth-container h3 {
+    position: relative;
+    top: 75%;
+    z-index: 1;
+    display: inline-block;
+}
+
+.fifth-container h3::after {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -2rem;
+    bottom: -0.25rem;
+    width: calc(100% + 4rem);
+    background: var(--text-color);
+    z-index: -1;
+
+    transform: scaleX(0.06);
+    transform-origin: left;
+    transition: transform 250ms ease-in;
+
+}
+
+.fifth-container:hover h3::after {
+    transform: scaleX(1);
+}
+
+.fifth-container .pop-up {
+    position: relative;
+    top: 66%;
+    z-index: 1;
+    display: inline-block;
+    z-index: 1;
+    left: .73rem;
+    color: transparent;
+    transition: color 150ms 300ms;
+}
+
+.fifth-container .pop-up::after {
+    content: '';
+    position: absolute;
+    top: -.2rem;
+    bottom: -.2rem;
+    left: -.2rem;
+    right: -.2rem;
+    background: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 150ms ease-in 250ms;
+    transform-origin: bottom;
+}
+
+.fifth-container:hover .pop-up {
+    color: var(--primary-color);
+}
+
+.fifth-container:hover .pop-up::after {
+    transform: scaleY(1);
+}
+
+/* Fifth Project Styling End */
+
+
 
 footer {
     width: 100vw;
