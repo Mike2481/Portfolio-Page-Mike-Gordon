@@ -236,6 +236,7 @@ body .projects {
     bottom: -0.25rem;
     width: calc(100% + 4rem);
     background: var(--text-color);
+    border-radius: .5em;
     z-index: -1;
 
     transform: scaleX(0.06);
@@ -267,6 +268,8 @@ body .projects {
     left: -.2rem;
     right: -.2rem;
     background: white;
+    border-radius: .5em;
+
     z-index: -1;
     transform: scaleY(0);
     transition: transform 150ms ease-in 250ms;
@@ -279,6 +282,11 @@ body .projects {
 
 .first-container:hover .pop-up::after {
     transform: scaleY(1);
+}
+
+.pop-up a, .pop-up a:hover, .pop-up a:visited, .pop-up a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* First Project Styling End */
@@ -316,6 +324,8 @@ body .projects {
     bottom: -0.25rem;
     width: calc(100% + 4rem);
     background: var(--text-color);
+    border-radius: .5em;
+
     z-index: -1;
 
     transform: scaleX(0.06);
@@ -347,6 +357,8 @@ body .projects {
     left: -.2rem;
     right: -.2rem;
     background: white;
+    border-radius: .5em;
+
     z-index: -1;
     transform: scaleY(0);
     transition: transform 150ms ease-in 250ms;
@@ -395,6 +407,8 @@ body .projects {
     bottom: -0.25rem;
     width: calc(100% + 4rem);
     background: var(--text-color);
+    border-radius: .5em;
+
     z-index: -1;
 
     transform: scaleX(0.06);
@@ -426,6 +440,8 @@ body .projects {
     left: -.2rem;
     right: -.2rem;
     background: white;
+    border-radius: .5em;
+
     z-index: -1;
     transform: scaleY(0);
     transition: transform 150ms ease-in 250ms;
@@ -474,6 +490,8 @@ body .projects {
     bottom: -0.25rem;
     width: calc(100% + 4rem);
     background: var(--text-color);
+    border-radius: .5em;
+
     z-index: -1;
 
     transform: scaleX(0.06);
@@ -505,6 +523,8 @@ body .projects {
     left: -.2rem;
     right: -.2rem;
     background: white;
+    border-radius: .5em;
+
     z-index: -1;
     transform: scaleY(0);
     transition: transform 150ms ease-in 250ms;
@@ -553,6 +573,8 @@ body .projects {
     bottom: -0.25rem;
     width: calc(100% + 4rem);
     background: var(--text-color);
+    border-radius: .5em;
+
     z-index: -1;
 
     transform: scaleX(0.06);
@@ -584,6 +606,8 @@ body .projects {
     left: -.2rem;
     right: -.2rem;
     background: white;
+    border-radius: .5em;
+
     z-index: -1;
     transform: scaleY(0);
     transition: transform 150ms ease-in 250ms;
@@ -607,7 +631,7 @@ footer {
     height: 10vh;
     position: relative;
     margin-bottom: 0;
-    background: black;
+    background: var(--text-color);
 }
 
 
@@ -620,7 +644,7 @@ footer {
 }
 
 .reach-out h3 {
-    color: white;
+    color: var(--primary-color);
 }
 
 .reach-out a {
@@ -628,6 +652,8 @@ footer {
     width: 100%;
     position: relative;
     padding: 2px;    
+    text-decoration: none;
+    color: initial;
 }
 
 .reach-out .link {
