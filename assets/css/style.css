@@ -145,7 +145,7 @@ nav a:focus::after {
 /* About Me Styling Start */
 
 .about-me {
-    height: 15em;
+    height: auto;
     border: .125em solid var(--primary-color);
     border-radius: 1em;
     top: 0;
