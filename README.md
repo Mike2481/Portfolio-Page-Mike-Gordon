@@ -6,11 +6,14 @@ Challenge-02 is an HTML/CSS portfolio page that can later be expanded on once mo
 
 The deployed page can be seen by following the link (  https://mike2481.github.io/challenge-02/ )
 
+
 ## Future Usage
 
-This page will be used in the future to submit to potential clients/employers to showcase skills and knowlegebase 
+This page will be used in the future to submit to potential clients/employers to showcase skills and knowledge base 
 
 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+![screenshot of deployed application](../images/profile-page-screenshot.png?raw=true "Mike Gordon Profile Page")

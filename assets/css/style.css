@@ -5,7 +5,7 @@
     list-style: none;
     text-decoration: none;
 }
-
+/* Variant Colors to be used throughout style sheet */
 :root {
     --primary-color:  #00458b;
     --background-color: #3fd2c7;
@@ -15,9 +15,9 @@
 html, body {
     min-height: 100%;
 }
-
+/* body background image with backup background color */
 body {
-    background-image: url(/assets/images/background.png);
+    background-image: url(../images/background.png);
     background-color: var(--background-color);
     position: relative;
 }
@@ -50,14 +50,14 @@ header h1 {
     font-style: italic;
 
 }
-
+/* Profile pic styling to center */
 header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 2em 3em 2em;
 }
-
+/* makes the profile pic look more like a logo */
 header .logo img {
     border-radius: 50%;
 }
@@ -66,7 +66,7 @@ header .logo img {
 
 /* Navigation Styling Start */
 
-
+/* Basic alignment of navigation done with flex */
 header nav {
     list-style: none;
     width: 100%;
@@ -77,7 +77,7 @@ header nav ul {
     display: flex;
     justify-content: space-around;
 }
-
+/* Navigation button styling to give them a glowing effect */
 nav a {
     display: inline-block;  
     cursor: pointer;
@@ -139,7 +139,7 @@ nav a:hover::after,
 nav a:focus::after {
     opacity: 1;
 }
-
+/* End Navigation Button Styling */
 /* Navigation Styling End */
 
 /* About Me Styling Start */
@@ -155,8 +155,7 @@ nav a:focus::after {
     background: var(--text-color);
     color: var(--primary-color);
 }
-
-
+/* About Me Title with line under */
 .about-me h2 {
     width: 100%;
     font-size: 2.5em;
@@ -166,7 +165,7 @@ nav a:focus::after {
     font-style: italic;
 
 }
-
+/* About Me Content (paragraph) */
 .about-me p {
     font-size: 1em;
     text-align: center;
@@ -175,7 +174,7 @@ nav a:focus::after {
 
 /* About Me Styling End */
 
-/* My Work Style Section */
+/* My Work Style Section Giving Background/Text color as well as shadowing */
 
 body .projects {
     display: flex;
@@ -202,7 +201,7 @@ body .projects {
     font-style: italic;
 
 }
-
+/* Project images were made to be background images so that I could create really cool links that slide in using only HTML/CSS */
 /*  First Project Styling Start */
 
 .first-container {
@@ -220,14 +219,14 @@ body .projects {
 
     
 }
-
+/* H3 explains what the work is - Future projects will have the project name here rather than just the tools used */
 .first-container h3 {
     position: relative;
     top: 85%;
     z-index: 1;
     display: inline-block;
 }
-
+/* Start of slide in effect that reveals clickable link to project page */
 .first-container h3::after {
     content: '';
     position: absolute;
@@ -248,7 +247,7 @@ body .projects {
 .first-container:hover h3::after {
     transform: scaleX(1);
 }
-
+/* This will send another sliding background upwards to reveal text of clickable link */
 .first-container .pop-up {
     position: relative;
     top: 80%;
@@ -271,6 +270,7 @@ body .projects {
     border-radius: .5em;
 
     z-index: -1;
+    /* setting the z-index at -1 here and at 1 for .pop-up allows the text to show through */
     transform: scaleY(0);
     transition: transform 150ms ease-in 250ms;
     transform-origin: bottom;
@@ -283,13 +283,18 @@ body .projects {
 .first-container:hover .pop-up::after {
     transform: scaleY(1);
 }
-
+/* This code will override the default hyperlink styling that turns the link purple.  This will keep the text hidden until hover is activated */
 .pop-up a, .pop-up a:hover, .pop-up a:visited, .pop-up a:active {
     text-decoration: none;
     color: inherit;
 }
+/* End of slide feature styling */
 
 /* First Project Styling End */
+
+/* Second through Fifth projects are placeholders with the same styling as the first with the exception being size as the first project is slightly larger */
+
+/* I have kept each section separate rather than grouping the CSS so that I can use different background images for each one and not impact the "animations" */
 
 /* Second Project Styling Start */
 
@@ -688,7 +693,9 @@ footer .button:hover {
     color: white;
 }
 
+/* Start of Media Queries to make the site responsive */
 
+/* This is the first range I identified using developer tool in Chrome */
 
 @media (min-width: 701px) and (max-width: 768px) {
     
@@ -712,7 +719,7 @@ footer .button:hover {
 
     
 }
-
+/* This was the only other breakpoint I needed as flex-wrap resolved all other display issues automatically */
 @media (max-width: 575px) {
     header {
         margin: 10px 0 0 0;
