@@ -207,7 +207,7 @@ body .projects {
 
 .first-container {
     padding: 2rem;
-    background-image: url(/assets/images/project-1.png);
+    background-image: url(/project-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
