@@ -2,6 +2,10 @@
 
 Challenge-02 is an HTML/CSS portfolio page that can later be expanded on once more projects and skills are obtained.
 
+## Sited Work
+
+The glow button effect used on the navigation buttons was achieved by following the "how to" YouTube channel of Kevin Powell
+
 ## Deployed Page
 
 The deployed page can be seen by following the link (  https://mike2481.github.io/challenge-02/ )
