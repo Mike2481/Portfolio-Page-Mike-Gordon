@@ -2,9 +2,9 @@
 
 Challenge-02 is an HTML/CSS portfolio page that can later be expanded on once more projects and skills are obtained.
 
-## Sited Work
+## Cited Work
 
-The glow button effect used on the navigation buttons was achieved by following the "how to" YouTube channel of Kevin Powell
+The glow button effect used on the navigation buttons and pop-feature within the "my work" section were achieved by following the "how to" YouTube channel of Kevin Powell
 
 ## Deployed Page
 
