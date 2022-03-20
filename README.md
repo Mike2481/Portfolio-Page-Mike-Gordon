@@ -8,7 +8,7 @@ The glow button effect used on the navigation buttons and pop-feature within the
 
 ## Deployed Page
 
-The deployed page can be seen by following the link (  https://mike2481.github.io/challenge-02/ )
+The deployed page can be seen by following the link (https://mike2481.github.io/Portfolio-Page-Mike-Gordon/)
 
 
 ## Future Usage

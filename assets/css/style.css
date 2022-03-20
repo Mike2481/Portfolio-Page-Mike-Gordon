@@ -1,65 +1,63 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 /* Variant Colors to be used throughout style sheet */
 :root {
-    --primary-color:  #00458b;
-    --background-color: #3fd2c7;
-    --text-color:  #99ddff;
+  --primary-color: #00458b;
+  --background-color: #3fd2c7;
+  --text-color: #99ddff;
 }
 
-html, body {
-    min-height: 100%;
+html,
+body {
+  min-height: 100%;
 }
 /* body background image with backup background color */
 body {
-    background-image: url(../images/background.png);
-    background-color: var(--background-color);
-    position: relative;
+  background-image: url(../images/background.png);
+  background-color: var(--background-color);
+  position: relative;
 }
 
 /* Header/Image Styling Start */
 
 header {
-    background-color: var(--text-color);
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 10px 5px 0 5px;
-    z-index: 999;
-    width: 90vw;
-    border: 1px solid black;
-    border-radius: 1em;
-
-
+  background-color: var(--text-color);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 10px 5px 0 5px;
+  z-index: 999;
+  width: 90vw;
+  border: 1px solid black;
+  border-radius: 1em;
 }
 
 header h1 {
-    width: 100%;
-    font-size: 6vw;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--primary-color);
-    text-shadow: 1px 2px white;
-    font-style: italic;
-
+  width: 100%;
+  font-size: 6vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--primary-color);
+  text-shadow: 1px 2px white;
+  font-style: italic;
 }
 /* Profile pic styling to center */
 header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 2em 3em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2em 3em 2em;
 }
 /* makes the profile pic look more like a logo */
 header .logo img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Header/Image Styling End */
@@ -68,76 +66,76 @@ header .logo img {
 
 /* Basic alignment of navigation done with flex */
 header nav {
-    list-style: none;
-    width: 100%;
-    margin-bottom: 20px;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 header nav ul {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 /* Navigation button styling to give them a glowing effect */
 nav a {
-    display: inline-block;  
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--primary-color);
-    border: var(--primary-color) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    font-size: 1em;
-    margin: .25em;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
+  border: var(--primary-color) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  font-size: 1em;
+  margin: 0.25em;
 
-    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
+  text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
 
-    box-shadow: inset 0 0 0.5em 0 var(--primary-color), 0 0 0.5em 0 var(--primary-color);
-    position: relative;
+  box-shadow: inset 0 0 0.5em 0 var(--primary-color),
+    0 0 0.5em 0 var(--primary-color);
+  position: relative;
 }
 
 nav a::before {
-    content: "";
-    position: absolute;
-    background: var(--primary-color);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--primary-color);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
 }
 
 nav a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 2em 0.5em var(--primary-color);
-    opacity: 0;
-    transition: opacity 100ms linear;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--primary-color);
+  opacity: 0;
+  transition: opacity 100ms linear;
 }
-
 
 nav a:hover,
 nav a:focus {
-    background: var(--primary-color);
-    color: black;
-    text-shadow: none;
+  background: var(--primary-color);
+  color: black;
+  text-shadow: none;
 }
 
 nav a:hover::before,
 nav a:focus::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 nav a:hover::after,
 nav a:focus::after {
-    opacity: 1;
+  opacity: 1;
 }
 /* End Navigation Button Styling */
 /* Navigation Styling End */
@@ -145,31 +143,29 @@ nav a:focus::after {
 /* About Me Styling Start */
 
 .about-me {
-    height: auto;
-    border: .125em solid var(--primary-color);
-    border-radius: 1em;
-    top: 0;
-    margin: 0 2em 3em 2em;
-    padding: 1em;
-    box-shadow: .25em .5em .5em var(--primary-color);
-    background: var(--text-color);
-    color: var(--primary-color);
+  height: auto;
+  border: 0.125em solid var(--primary-color);
+  border-radius: 1em;
+  top: 0;
+  margin: 0 2em 3em 2em;
+  padding: 1em;
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  background: var(--text-color);
+  color: var(--primary-color);
 }
 /* About Me Title with line under */
 .about-me h2 {
-    width: 100%;
-    font-size: 2.5em;
-    border-bottom: .05em solid black;
-    text-align: center;
-    text-shadow: 1px 2px white;
-    font-style: italic;
-
+  width: 100%;
+  font-size: 2.5em;
+  border-bottom: 0.05em solid black;
+  text-align: center;
+  text-shadow: 1px 2px white;
+  font-style: italic;
 }
 /* About Me Content (paragraph) */
 .about-me p {
-    font-size: 1em;
-    text-align: center;
-    
+  font-size: 1em;
+  text-align: center;
 }
 
 /* About Me Styling End */
@@ -177,116 +173,114 @@ nav a:focus::after {
 /* My Work Style Section Giving Background/Text color as well as shadowing */
 
 body .projects {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border: .125em solid var(--primary-color);
-    border-radius: 1em;
-    top: 0;
-    margin: 0 2em 3em 2em;
-    padding: 1em;
-    box-shadow: .25em .5em .5em var(--primary-color);
-    justify-content: space-around;
-    background: var(--text-color);
-    color: var(--primary-color);
-
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 0.125em solid var(--primary-color);
+  border-radius: 1em;
+  top: 0;
+  margin: 0 2em 3em 2em;
+  padding: 1em;
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  justify-content: space-around;
+  background: var(--text-color);
+  color: var(--primary-color);
 }
- 
-.projects h2 {
-    width: 100%;
-    font-size: 2.5em;
-    border-bottom: .05em solid black;
-    text-align: center;
-    text-shadow: 1px 1.5px white;
-    font-style: italic;
 
+.projects h2 {
+  width: 100%;
+  font-size: 2.5em;
+  border-bottom: 0.05em solid black;
+  text-align: center;
+  text-shadow: 1px 1.5px white;
+  font-style: italic;
 }
 /* Project images were made to be background images so that I could create really cool links that slide in using only HTML/CSS */
 /*  First Project Styling Start */
 
 .first-container {
-    padding: 2rem;
-    background-image: url(../images/project-1.png);
-    background-size: cover;
-    
-    border-radius: 1rem;
-    margin: 1rem 2em 3em 2em;
-    color: var(--primary-color);
-    box-shadow: .25em .5em .5em var(--primary-color);
-    width: 250px;
-    height: 200px;
-    text-align: left;
+  padding: 2rem;
+  background-image: url(../images/project-1.png);
+  background-size: cover;
 
-    
+  border-radius: 1rem;
+  margin: 1rem 2em 3em 2em;
+  color: var(--primary-color);
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  width: 250px;
+  height: 200px;
+  text-align: left;
 }
 /* H3 explains what the work is - Future projects will have the project name here rather than just the tools used */
 .first-container h3 {
-    position: relative;
-    top: 85%;
-    z-index: 1;
-    display: inline-block;
+  position: relative;
+  top: 85%;
+  z-index: 1;
+  display: inline-block;
 }
 /* Start of slide in effect that reveals clickable link to project page */
 .first-container h3::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -2rem;
-    bottom: -0.25rem;
-    width: calc(100% + 4rem);
-    background: var(--text-color);
-    border-radius: .5em;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: var(--text-color);
+  border-radius: 0.5em;
+  z-index: -1;
 
-    transform: scaleX(0.06);
-    transform-origin: left;
-    transition: transform 250ms ease-in;
-
+  transform: scaleX(0.06);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
 }
 
 .first-container:hover h3::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 /* This will send another sliding background upwards to reveal text of clickable link */
 .first-container .pop-up {
-    position: relative;
-    top: 80%;
-    z-index: 1;
-    display: inline-block;
-    z-index: 1;
-    left: -.58rem;
-    color: transparent;
-    transition: color 150ms 300ms;
+  position: relative;
+  top: 80%;
+  z-index: 1;
+  display: inline-block;
+  z-index: 1;
+  left: -0.58rem;
+  color: transparent;
+  transition: color 150ms 300ms;
 }
 
 .first-container .pop-up::after {
-    content: '';
-    position: absolute;
-    top: -.2rem;
-    bottom: -.2rem;
-    left: -.2rem;
-    right: -.2rem;
-    background: white;
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  background: white;
+  border-radius: 0.5em;
 
-    z-index: -1;
-    /* setting the z-index at -1 here and at 1 for .pop-up allows the text to show through */
-    transform: scaleY(0);
-    transition: transform 150ms ease-in 250ms;
-    transform-origin: bottom;
+  z-index: -1;
+  /* setting the z-index at -1 here and at 1 for .pop-up allows the text to show through */
+  transform: scaleY(0);
+  transition: transform 150ms ease-in 250ms;
+  transform-origin: bottom;
 }
 
 .first-container:hover .pop-up {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .first-container:hover .pop-up::after {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 /* This code will override the default hyperlink styling that turns the link purple.  This will keep the text hidden until hover is activated */
-.pop-up a, .pop-up a:hover, .pop-up a:visited, .pop-up a:active {
-    text-decoration: none;
-    color: inherit;
+.pop-up a,
+.pop-up a:hover,
+.pop-up a:visited,
+.pop-up a:active {
+  text-decoration: none;
+  color: inherit;
 }
 /* End of slide feature styling */
 
@@ -299,398 +293,382 @@ body .projects {
 /* Second Project Styling Start */
 
 .second-container {
-    padding: 2rem;
-    background-image: url(../images/food-flick-screenshot.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    margin: 1rem 2em 3em 2em;
-    color: var(--primary-color);
-    box-shadow: .25em .5em .5em var(--primary-color);
-    width: 200px;
-    height: 150px;
-    text-align: left;
-
-    
+  padding: 2rem;
+  background-image: url(../images/food-flick-screenshot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  margin: 1rem 2em 3em 2em;
+  color: var(--primary-color);
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  width: 200px;
+  height: 150px;
+  text-align: left;
 }
 
 .second-container h3 {
-    position: relative;
-    top: 75%;
-    z-index: 1;
-    display: inline-block;
+  position: relative;
+  top: 75%;
+  z-index: 1;
+  display: inline-block;
 }
 
 .second-container h3::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -2rem;
-    bottom: -0.25rem;
-    width: calc(100% + 4rem);
-    background: var(--text-color);
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: var(--text-color);
+  border-radius: 0.5em;
 
-    z-index: -1;
+  z-index: -1;
 
-    transform: scaleX(0.06);
-    transform-origin: left;
-    transition: transform 250ms ease-in;
-
+  transform: scaleX(0.06);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
 }
 
 .second-container:hover h3::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .second-container .pop-up {
-    position: relative;
-    top: 66%;
-    z-index: 1;
-    display: inline-block;
-    z-index: 1;
-    left: .73rem;
-    color: transparent;
-    transition: color 150ms 300ms;
+  position: relative;
+  top: 66%;
+  z-index: 1;
+  display: inline-block;
+  z-index: 1;
+  left: 0.73rem;
+  color: transparent;
+  transition: color 150ms 300ms;
 }
 
 .second-container .pop-up::after {
-    content: '';
-    position: absolute;
-    top: -.2rem;
-    bottom: -.2rem;
-    left: -.2rem;
-    right: -.2rem;
-    background: white;
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  background: white;
+  border-radius: 0.5em;
 
-    z-index: -1;
-    transform: scaleY(0);
-    transition: transform 150ms ease-in 250ms;
-    transform-origin: bottom;
+  z-index: -1;
+  transform: scaleY(0);
+  transition: transform 150ms ease-in 250ms;
+  transform-origin: bottom;
 }
 
 .second-container:hover .pop-up {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .second-container:hover .pop-up::after {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 /* Second Project Styling End */
 
 /* Third Project Styling Start */
 .third-container {
-    padding: 2rem;
-    background-image: url(https://via.placeholder.com/200/0000ff.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    margin: 1rem 2em 3em 2em;
-    color: var(--primary-color);
-    box-shadow: .25em .5em .5em var(--primary-color);
-    width: 200px;
-    height: 150px;
-    text-align: left;
-
-    
+  padding: 2rem;
+  background-image: url(../images/fluffy-potato-screenshot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  margin: 1rem 2em 3em 2em;
+  color: var(--primary-color);
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  width: 200px;
+  height: 150px;
+  text-align: left;
 }
 
 .third-container h3 {
-    position: relative;
-    top: 75%;
-    z-index: 1;
-    display: inline-block;
+  position: relative;
+  top: 75%;
+  z-index: 1;
+  display: inline-block;
 }
 
 .third-container h3::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -2rem;
-    bottom: -0.25rem;
-    width: calc(100% + 4rem);
-    background: var(--text-color);
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: var(--text-color);
+  border-radius: 0.5em;
 
-    z-index: -1;
+  z-index: -1;
 
-    transform: scaleX(0.06);
-    transform-origin: left;
-    transition: transform 250ms ease-in;
-
+  transform: scaleX(0.06);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
 }
 
 .third-container:hover h3::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .third-container .pop-up {
-    position: relative;
-    top: 66%;
-    z-index: 1;
-    display: inline-block;
-    z-index: 1;
-    left: .73rem;
-    color: transparent;
-    transition: color 150ms 300ms;
+  position: relative;
+  top: 66%;
+  z-index: 1;
+  display: inline-block;
+  z-index: 1;
+  left: 0.73rem;
+  color: transparent;
+  transition: color 150ms 300ms;
 }
 
 .third-container .pop-up::after {
-    content: '';
-    position: absolute;
-    top: -.2rem;
-    bottom: -.2rem;
-    left: -.2rem;
-    right: -.2rem;
-    background: white;
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  background: white;
+  border-radius: 0.5em;
 
-    z-index: -1;
-    transform: scaleY(0);
-    transition: transform 150ms ease-in 250ms;
-    transform-origin: bottom;
+  z-index: -1;
+  transform: scaleY(0);
+  transition: transform 150ms ease-in 250ms;
+  transform-origin: bottom;
 }
 
 .third-container:hover .pop-up {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .third-container:hover .pop-up::after {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 /* Third Project Styling End */
 
 /* Fourth Project Styling Start */
 .fourth-container {
-    padding: 2rem;
-    background-image: url(https://via.placeholder.com/200/0000ff.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    margin: 1rem 2em 3em 2em;
-    color: var(--primary-color);
-    box-shadow: .25em .5em .5em var(--primary-color);
-    width: 200px;
-    height: 150px;
-    text-align: left;
-
-    
+  padding: 2rem;
+  background-image: url(https://via.placeholder.com/200/0000ff.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  margin: 1rem 2em 3em 2em;
+  color: var(--primary-color);
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  width: 200px;
+  height: 150px;
+  text-align: left;
 }
 
 .fourth-container h3 {
-    position: relative;
-    top: 75%;
-    z-index: 1;
-    display: inline-block;
+  position: relative;
+  top: 75%;
+  z-index: 1;
+  display: inline-block;
 }
 
 .fourth-container h3::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -2rem;
-    bottom: -0.25rem;
-    width: calc(100% + 4rem);
-    background: var(--text-color);
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: var(--text-color);
+  border-radius: 0.5em;
 
-    z-index: -1;
+  z-index: -1;
 
-    transform: scaleX(0.06);
-    transform-origin: left;
-    transition: transform 250ms ease-in;
-
+  transform: scaleX(0.06);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
 }
 
 .fourth-container:hover h3::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .fourth-container .pop-up {
-    position: relative;
-    top: 66%;
-    z-index: 1;
-    display: inline-block;
-    z-index: 1;
-    left: .73rem;
-    color: transparent;
-    transition: color 150ms 300ms;
+  position: relative;
+  top: 66%;
+  z-index: 1;
+  display: inline-block;
+  z-index: 1;
+  left: 0.73rem;
+  color: transparent;
+  transition: color 150ms 300ms;
 }
 
 .fourth-container .pop-up::after {
-    content: '';
-    position: absolute;
-    top: -.2rem;
-    bottom: -.2rem;
-    left: -.2rem;
-    right: -.2rem;
-    background: white;
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  background: white;
+  border-radius: 0.5em;
 
-    z-index: -1;
-    transform: scaleY(0);
-    transition: transform 150ms ease-in 250ms;
-    transform-origin: bottom;
+  z-index: -1;
+  transform: scaleY(0);
+  transition: transform 150ms ease-in 250ms;
+  transform-origin: bottom;
 }
 
 .fourth-container:hover .pop-up {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .fourth-container:hover .pop-up::after {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 /* Fourth Project Styling End */
 
 /* Fifth Project Styling Start */
 .fifth-container {
-    padding: 2rem;
-    background-image: url(https://via.placeholder.com/200/0000ff.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 1rem;
-    margin: 1rem 2em 3em 2em;
-    color: var(--primary-color);
-    box-shadow: .25em .5em .5em var(--primary-color);
-    width: 200px;
-    height: 150px;
-    text-align: left;
-
-    
+  padding: 2rem;
+  background-image: url(https://via.placeholder.com/200/0000ff.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  margin: 1rem 2em 3em 2em;
+  color: var(--primary-color);
+  box-shadow: 0.25em 0.5em 0.5em var(--primary-color);
+  width: 200px;
+  height: 150px;
+  text-align: left;
 }
 
 .fifth-container h3 {
-    position: relative;
-    top: 75%;
-    z-index: 1;
-    display: inline-block;
+  position: relative;
+  top: 75%;
+  z-index: 1;
+  display: inline-block;
 }
 
 .fifth-container h3::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -2rem;
-    bottom: -0.25rem;
-    width: calc(100% + 4rem);
-    background: var(--text-color);
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -2rem;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background: var(--text-color);
+  border-radius: 0.5em;
 
-    z-index: -1;
+  z-index: -1;
 
-    transform: scaleX(0.06);
-    transform-origin: left;
-    transition: transform 250ms ease-in;
-
+  transform: scaleX(0.06);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
 }
 
 .fifth-container:hover h3::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .fifth-container .pop-up {
-    position: relative;
-    top: 66%;
-    z-index: 1;
-    display: inline-block;
-    z-index: 1;
-    left: .73rem;
-    color: transparent;
-    transition: color 150ms 300ms;
+  position: relative;
+  top: 66%;
+  z-index: 1;
+  display: inline-block;
+  z-index: 1;
+  left: 0.73rem;
+  color: transparent;
+  transition: color 150ms 300ms;
 }
 
 .fifth-container .pop-up::after {
-    content: '';
-    position: absolute;
-    top: -.2rem;
-    bottom: -.2rem;
-    left: -.2rem;
-    right: -.2rem;
-    background: white;
-    border-radius: .5em;
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: -0.2rem;
+  right: -0.2rem;
+  background: white;
+  border-radius: 0.5em;
 
-    z-index: -1;
-    transform: scaleY(0);
-    transition: transform 150ms ease-in 250ms;
-    transform-origin: bottom;
+  z-index: -1;
+  transform: scaleY(0);
+  transition: transform 150ms ease-in 250ms;
+  transform-origin: bottom;
 }
 
 .fifth-container:hover .pop-up {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .fifth-container:hover .pop-up::after {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 /* Fifth Project Styling End */
 
-
-
 footer {
-    width: 100vw;
-    height: 10vh;
-    position: relative;
-    margin-bottom: 0;
-    background: var(--text-color);
+  width: 100vw;
+  height: 10vh;
+  position: relative;
+  margin-bottom: 0;
+  background: var(--text-color);
 }
 
-
 .reach-out {
-    margin: 2px 0;
-    text-align: center;
-    height: 40px;
-    left: 100%;
-
+  margin: 2px 0;
+  text-align: center;
+  height: 40px;
+  left: 100%;
 }
 
 .reach-out h3 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .reach-out a {
-    font-size: 1.25em;
-    width: 100%;
-    position: relative;
-    padding: 2px;    
-    text-decoration: none;
-    color: initial;
+  font-size: 1.25em;
+  width: 100%;
+  position: relative;
+  padding: 2px;
+  text-decoration: none;
+  color: initial;
 }
 
 .reach-out .link {
-    transition: font-size ease-out 150ms;
-    font-size: 1.25em;
-    top: 0%;
+  transition: font-size ease-out 150ms;
+  font-size: 1.25em;
+  top: 0%;
 }
 
 .reach-out .link:hover {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 footer .button {
-    width: 6em;
-    height: 1.5em;
-    transition: height, margin ease-out 150ms;
-    color: var(--primary-color);
-    border: 1px solid black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: .75em;
-    border-radius: .35em;
-    padding: 2.5px;
-    cursor: pointer;
-    transform: translateY(-2px);
-    text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
+  width: 6em;
+  height: 1.5em;
+  transition: height, margin ease-out 150ms;
+  color: var(--primary-color);
+  border: 1px solid black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.75em;
+  border-radius: 0.35em;
+  padding: 2.5px;
+  cursor: pointer;
+  transform: translateY(-2px);
+  text-shadow: 0 0 0.25 hsl(0, 0, 100% / 0.5), 0 0 0.125em var(--primary-color);
 }
 
 footer .button:hover {
-    height: 2em;
-    margin: .5em;
-    background-color: var(--primary-color);
-    color: white;
+  height: 2em;
+  margin: 0.5em;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 /* Start of Media Queries to make the site responsive */
@@ -698,54 +676,47 @@ footer .button:hover {
 /* This is the first range I identified using developer tool in Chrome */
 
 @media (min-width: 701px) and (max-width: 768px) {
-    
-
-    header {
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-    header h1 {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        font-size: 6rem;
-    }
-    header .logo {
-        flex: 2;
-    }
-
-    
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 6rem;
+  }
+  header .logo {
+    flex: 2;
+  }
 }
 /* This was the only other breakpoint I needed as flex-wrap resolved all other display issues automatically */
 @media (max-width: 575px) {
-    header {
-        margin: 10px 0 0 0;
-    }
-    header h1 {
-        font-size: 2.5em;
-    }
-    header .logo {
-       transform: scale(.7);
-    }
-    header nav ul {
-        flex-wrap: wrap;
-    }
+  header {
+    margin: 10px 0 0 0;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+  header .logo {
+    transform: scale(0.7);
+  }
+  header nav ul {
+    flex-wrap: wrap;
+  }
 
-    header nav ul li {
-        margin: 1.5em .5em 0 .5em;
-    }
+  header nav ul li {
+    margin: 1.5em 0.5em 0 0.5em;
+  }
 
-    section .projects {
-        margin: 0 0.25em 3em 0.25em;
-    }
+  section .projects {
+    margin: 0 0.25em 3em 0.25em;
+  }
 
-    .project-1 {
-        margin-top: 1em;
-        margin-bottom: .5em;
-    }
-
-
+  .project-1 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
 }
